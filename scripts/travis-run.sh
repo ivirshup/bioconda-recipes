@@ -56,6 +56,10 @@ then
     fi
 fi
 
+echo "Echoing range arg!"
+echo $RANGE_ARG
+echo $RANGE
+
 export PATH=/anaconda/bin:$PATH
 
 # On travis we always run on docker for linux. This may not always be the case
@@ -94,4 +98,3 @@ then
     RANGE_ARG=""
 fi
 set -x; bioconda-utils build recipes config.yml $UPLOAD_ARG $DOCKER_ARG $BIOCONDA_UTILS_BUILD_ARGS $RANGE_ARG; set +x;
-
