@@ -28,7 +28,7 @@ echo $RANGE_ARG
 # or the pull request.
 if [[ $TRAVIS = "true" ]]
 then
-    echo 1
+    # echo 1
     RANGE="$TRAVIS_BRANCH HEAD"
     if [ $TRAVIS_PULL_REQUEST == "false" ]
     then
@@ -48,7 +48,7 @@ then
         # case 1: env matrix changed or this is a cron job. In this case
         # consider all recipes.
         RANGE_ARG=""
-        echo 2
+        # echo 2
 	# skip linting: we don't want to fix all recipes if we just update the env matrix
 	SKIP_LINTING=true
         echo "considering all recipes because either env matrix was changed or build is triggered via cron"
@@ -57,7 +57,7 @@ then
         # on master, or (b) changed in this pull request compared to the target
         # branch.
         RANGE_ARG="--git-range $RANGE"
-        echo 3
+        # echo 3
     fi
 fi
 
