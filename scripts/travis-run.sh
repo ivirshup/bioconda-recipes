@@ -20,6 +20,7 @@ then
 fi
 
 SKIP_LINTING=false
+env
 
 # determine recipes to build. If building locally, build anything that changed
 # since master. If on travis, only build the commit range included in the push
@@ -94,4 +95,3 @@ then
     RANGE_ARG=""
 fi
 set -x; bioconda-utils build recipes config.yml $UPLOAD_ARG $DOCKER_ARG $BIOCONDA_UTILS_BUILD_ARGS $RANGE_ARG; set +x;
-
