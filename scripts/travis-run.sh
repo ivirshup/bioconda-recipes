@@ -20,7 +20,7 @@ fi
 
 SKIP_LINTING=false
 
-env
+# env
 echo $RANGE_ARG
 
 # determine recipes to build. If building locally, build anything that changed
