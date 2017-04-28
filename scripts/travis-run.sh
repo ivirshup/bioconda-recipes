@@ -21,7 +21,7 @@ fi
 SKIP_LINTING=false
 
 # env
-echo $RANGE_ARG
+# echo $RANGE_ARG
 
 # determine recipes to build. If building locally, build anything that changed
 # since master. If on travis, only build the commit range included in the push
@@ -61,9 +61,9 @@ then
     fi
 fi
 
-echo "Echoing range arg!"
-echo $RANGE_ARG
-echo $RANGE
+# echo "Echoing range arg!"
+# echo $RANGE_ARG
+# echo $RANGE
 
 export PATH=/anaconda/bin:$PATH
 
