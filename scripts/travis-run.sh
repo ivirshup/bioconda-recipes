@@ -8,8 +8,6 @@ set +u
 [[ -z $RANGE_ARG ]] && RANGE_ARG="--git-range master HEAD"
 [[ -z $DISABLE_BIOCONDA_UTILS_BUILD_GIT_RANGE_CHECK  ]] && DISABLE_BIOCONDA_UTILS_BUILD_GIT_RANGE_CHECK="false"
 set -u
-
-
 if [[ $TRAVIS_BRANCH != "master" && $TRAVIS_PULL_REQUEST == "false" && $TRAVIS_REPO_SLUG == "bioconda/bioconda-recipes" ]]
 then
     echo ""
@@ -22,6 +20,7 @@ fi
 
 SKIP_LINTING=false
 
+env
 echo $RANGE_ARG
 
 # determine recipes to build. If building locally, build anything that changed
